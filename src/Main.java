@@ -1,7 +1,7 @@
-import prototype.Camisa; // Importa a classe do padrão Prototype
-import proxy.Image;      // Importa a interface do padrão Proxy
-import proxy.ProxyImage; // Importa a classe Proxy do padrão Proxy
-import proxy.RealImage;  // Importa a classe RealImage do padrão Proxy
+import prototype.Camisa;
+import proxy.Image;
+import proxy.ProxyImage;
+import proxy.RealImage;
 
 public class Main {
     public static void main(String[] args) {

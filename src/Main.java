@@ -15,17 +15,15 @@ public class Main {
         System.out.println("\nCamisa Azul:");
         System.out.println(camisaAzul);
 
+        System.out.println("\nPadrão Proxy\n");
+
         // Testando o padrão Proxy
         Image image1 = new ProxyImage("image1.jpg");
         Image image2 = new ProxyImage("image2.jpg");
 
-        System.out.println("\nDisplaying image1:");
-        image1.display(); // A imagem será carregada e exibida
+        image1.display();
+        image1.display();
 
-        System.out.println("\nDisplaying image1 again:");
-        image1.display(); // A imagem já está carregada, não será carregada novamente
-
-        System.out.println("\nDisplaying image2:");
-        image2.display(); // A imagem será carregada e exibida
+        image2.display();
     }
 }

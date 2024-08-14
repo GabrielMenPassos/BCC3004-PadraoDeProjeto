@@ -2,6 +2,8 @@ import prototype.Camisa;
 import proxy.Image;
 import proxy.ProxyImage;
 import proxy.RealImage;
+import command.*;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -25,5 +27,34 @@ public class Main {
         image1.display();
 
         image2.display();
+
+        // Testando o padrão Command
+        System.out.println("\nPadrão Command\n");
+
+        Light light = new Light();
+        Fan fan = new Fan();
+
+        Command lightOn = new LightOnCommand(light);
+        Command lightOff = new LightOffCommand(light);
+        Command fanOn = new FanOnCommand(fan);
+        Command fanOff = new FanOffCommand(fan);
+
+        RemoteControl remote = new RemoteControl();
+
+        remote.setCommand(lightOn);
+        remote.pressButton();
+        remote.pressUndo();
+
+        remote.setCommand(lightOff);
+        remote.pressButton();
+        remote.pressUndo();
+
+        remote.setCommand(fanOn);
+        remote.pressButton();
+        remote.pressUndo();
+
+        remote.setCommand(fanOff);
+        remote.pressButton();
+        remote.pressUndo();
     }
 }
